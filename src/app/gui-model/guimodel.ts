@@ -158,7 +158,41 @@ export class GuiModel {
                         "name": "Ok"
                       }
                     ]
-                  }
+                },
+                {
+                    "id": "ActivityForm",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
+                      {
+                        "id": "name",
+                        "type": "text",
+                        "name": "Name",
+                        "width": 2,
+                        "required": true
+                      },
+                      {
+                          "id": "location",
+                          "type": "autocomplete",
+                          "name": "Location",
+                          "url": "/location",
+                          "form": "LocationForm",
+                          "width": 2
+                        },
+                      {
+                        "type": "deleteButton",
+                        "name": "Delete"
+                      },
+                      {
+                        "type": "cancelButton",
+                        "name": "Cancel"
+                      },
+                      {
+                        "type": "okButton",
+                        "name": "Ok"
+                      }
+                    ]
+                }
             ],
             "pageList": [
                 {
@@ -185,6 +219,13 @@ export class GuiModel {
                             "icon": "fa-weixin",
                             "color": "wisteria",
                             "page": "groupspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Activities",
+                            "icon": "fa-heart",
+                            "color": "green",
+                            "page": "activitypage",
                         },
                     ]
                 },
@@ -266,6 +307,34 @@ export class GuiModel {
                             "url": "/location",
                             "form": {
                                 "form": "LocationForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "activitypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-heart",
+                            "color": "green",
+                            "width": 2,
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-heart",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "ActivityForm"
                             }
                         },
                     ]
