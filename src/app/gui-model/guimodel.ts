@@ -127,7 +127,17 @@ export class GuiModel {
                         {
                             "type": "okButton",
                             "name": "Ok"
-                        }
+                        },
+                        {
+                            "id":   "activity",
+                            "type": "autocomplete",
+                            "name": "Activity",
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "readonly": true,
+                            "form": "ActivityForm",
+                            
+                        },
                     ]
                 },
                 {
@@ -352,6 +362,9 @@ export class GuiModel {
                                 "form": "LocationForm"
                             }
                         },
+
+                        
+                        
                     ]
                 },
             ]
