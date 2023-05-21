@@ -30,7 +30,7 @@ export class GuiModel {
                     "title": "Friend",
                     "url": "/friend",
                     "formFieldList": [
-                     
+
                         {
                             "id": "familyName",
                             "type": "text",
@@ -68,15 +68,6 @@ export class GuiModel {
                             "form": "LocationForm",
                             "width": 2
                         },
-                        {
-                            "id": "activities",
-                            "type": "autocomplete",
-                            "name": "Activities",
-                            "url": "/activities",
-                            "form": "ActivityForm",
-                            "width": 2
-                        },
-
                         {
                             "id": "birthdate",
                             "type": "date",
@@ -387,8 +378,51 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
+                            "page": "friendsdetailspage",
+                        },
+                    ]
+                },
+
+                {
+                    "id": "friendsdetailspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+
+                        {
+                            "type": "button",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "width": 2,
+                            "search": true,
+                            "url": "/friend",
+                            "defaultKey": "friendKey",
                             "form": {
                                 "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-user",
+                            "url": "/activity",
+                            "color": "green",
+                            "defaultKey": "activityKey",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "form": {
+                                "form": "ActivityForm"
                             }
                         },
                     ]
