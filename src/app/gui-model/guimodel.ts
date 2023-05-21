@@ -378,13 +378,12 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "page": "friendsdetailspage",
+                            "page": "frienddetailspage",
                         },
                     ]
                 },
-
                 {
-                    "id": "friendsdetailspage",
+                    "id": "frienddetailspage",
                     "elementList": [
                         {
                             "type": "backbutton",
@@ -455,7 +454,38 @@ export class GuiModel {
                         },
                     ]
                 },
-
+                {
+                    "id": "activitydetailspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditActivity",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "width": 2,
+                            "search": true,
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/friend",
+                            "defaultKey": "friendKey",
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                    ]
+                },
                 {
                     "id": "locationspage",
                     "elementList": [
@@ -509,9 +539,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/activity",
-                            "form": {
-                                "form": "ActivityForm"
-                            }
+                            "page": "activitydetailspage",
                         },
                     ]
                 },
